@@ -12,22 +12,11 @@ module.exports = {
       var start = 1;
     }
 
-    //test data for csv downloader
-    // const datas = [{
-    //   first: 'foo',
-    //   second: 'bar'
-    // }, {
-    //   first: 'foobar',
-    //   second: 'foobar'
-    // }];
-
-    //return test data
-    // return datas;
     // Connect to API and return data
     var requestUrl = `${GOOGLE_APLITRAK_URL}&q=${encodedLocation}&start=${start}`;
 
     return axios.get(requestUrl).then(function(res) {
-      return res.data;
+      return res.data.items;
     }, function (res) {
       throw new Error(res.data.error.code + ' - ' + res.data.error.message);
     })

@@ -19,7 +19,8 @@ var JobSearch = React.createClass({
       isLoading: true,
       errorMessage: undefined,
       location: undefined,
-      temp: undefined
+      temp: undefined,
+      start: 1
     });
 
     googleAplitrak.getData(location).then(function(temp) {
@@ -61,7 +62,7 @@ var JobSearch = React.createClass({
         return (
           <div>
             <table>
-              <JobTable items={temp.items} location={location}/>
+              <JobTable items={temp} location={location}/>
             </table>
           </div>
         );
