@@ -2,11 +2,14 @@ var React = require('react');
 
 var JobTableRow = React.createClass({
   render: function () {
-    var {temp, key} = this.props;
+    var {item} = this.props;
 
     return (
       <tr>
-        <td>{temp.items[0].title}</td>
+        <td>{item.title}</td>
+        <td>{item.link}</td>
+        <td>{item.snippet}</td>
+        <td>{item.cacheId}</td>
       </tr>
     );
   }
