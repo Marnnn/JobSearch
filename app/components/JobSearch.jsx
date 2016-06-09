@@ -1,8 +1,10 @@
 var React = require('react');
 var JobForm = require('JobForm');
 var JobTable = require('JobTable');
+var JobTableRow = require('JobTableRow');
 var ErrorModal = require('ErrorModal');
 var googleAplitrak = require('googleAplitrak');
+var CsvDownloader = require('react-csv-downloader');
 
 var JobSearch = React.createClass({
   getInitialState: function () {
@@ -56,7 +58,13 @@ var JobSearch = React.createClass({
       if (isLoading) {
         return <h3 className="text-center">Fetching jobs...</h3>;
       } else if (temp && location) {
-        return <JobTable temp={temp} location={location}/>;
+        // return <JobTable temp={temp} location={location}/>;
+        return (
+          <div>
+            <CsvDownloader filename="myfile" datas={temp.items} text="Download"/>
+          </div>
+        );
+        // return (<table><JobTable temp={temp}/></table>);
       }
     }
 
@@ -70,10 +78,14 @@ var JobSearch = React.createClass({
 
     return (
       <div>
-        <h1 className="text-center page-title">Search jobs!</h1>
-        <JobForm onSearch={this.handleSearch}/>
-        {renderMessage()}
-        {renderError()}
+        <div>
+          <h1 className="text-center page-title">Search jobs!</h1>
+          <JobForm onSearch={this.handleSearch}/>
+        </div>
+        <div>
+          {renderMessage()}
+          {renderError()}
+        </div>
       </div>
     );
   }

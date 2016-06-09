@@ -27,6 +27,7 @@ module.exports = {
       JobSearch: 'app/components/JobSearch.jsx',
       JobForm: 'app/components/JobForm.jsx',
       JobTable: 'app/components/JobTable.jsx',
+      JobTableRow: 'app/components/JobTableRow.jsx',
       googleAplitrak: 'app/api/googleAplitrak.jsx',
       ErrorModal: 'app/components/ErrorModal.jsx',
       applicationStyles: 'app/styles/app.scss'

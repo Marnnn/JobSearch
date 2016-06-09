@@ -22,21 +22,23 @@ var Nav = React.createClass({
             <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Jobs</IndexLink></li>
           </ul>
         </div>
-        <div className="top-bar-right">
-          <form onSubmit={this.onSearch}>
-            <ul className="menu">
-              <li>
-                <input type="search" ref="location" placeholder="Search job type eg. bi developer"/>
-              </li>
-              <li>
-                <input type="submit" className="button" value="Get Weather"/>
-              </li>
-            </ul>
-          </form>
-        </div>
       </div>
     );
   }
 });
 
 module.exports = Nav;
+
+//// old nav search bar
+// <div className="top-bar-right">
+//   <form onSubmit={this.onSearch}>
+//     <ul className="menu">
+//       <li>
+//         <input type="search" ref="location" placeholder="Search job type eg. bi developer"/>
+//       </li>
+//       <li>
+//         <input type="submit" className="button" value="Get Weather"/>
+//       </li>
+//     </ul>
+//   </form>
+// </div>

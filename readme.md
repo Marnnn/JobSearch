@@ -1,1 +1,1 @@
-React Weather Application
+React Job Search Application
