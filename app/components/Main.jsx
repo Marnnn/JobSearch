@@ -1,5 +1,7 @@
 var React = require('react');
 var Nav = require('Nav');
+var JobSearch = require('JobSearch');
+var JobForm = require('JobForm');
 
 var Main = (props) => {
   return (
@@ -7,9 +9,10 @@ var Main = (props) => {
       <Nav/>
       <div className="row">
         <div className="columns medium-10 large-4 small-centered">
-          {props.children}
+          
         </div>
       </div>
+      <JobSearch/>
     </div>
   );
 };

@@ -4,7 +4,7 @@ var JobTable = require('JobTable');
 var JobTableRow = require('JobTableRow');
 var ErrorModal = require('ErrorModal');
 var googleAplitrak = require('googleAplitrak');
-//var CsvDownloader = require('react-csv-downloader');
+// var CsvDownloader = require('react-csv-downloader');
 
 var JobSearch = React.createClass({
   getInitialState: function () {
@@ -60,7 +60,7 @@ var JobSearch = React.createClass({
         return <h3 className="text-center">Fetching jobs...</h3>;
       } else if (temp && location) {
         return (
-          <div>
+          <div className="row">
             <table>
               <JobTable items={temp} location={location}/>
             </table>
