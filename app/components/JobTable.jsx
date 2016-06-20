@@ -28,18 +28,3 @@ var JobTable = React.createClass({
 });
 
 module.exports = JobTable;
-
-
-
-// <div>
-//   <CsvDownloader filename={location + '_Aplitrak_'} datas={temp.items} suffix="true" separator="," text="Download"/>
-// </div>
-//
-// <tbody>
-//   {(function (rows, i, len) {
-//     while (++i <= len) {
-//       rows.push(<JobTableRow temp={temp} key={i} />)
-//     }
-//     return rows;
-//   })([], 0, 10)}
-// </tbody>
